@@ -1,0 +1,36 @@
+﻿Build started 21/12/2012 09:57:14 م.
+     1>Project "C:\Users\_-WALID-_\documents\visual studio 11\Projects\Alg_repo\Alg_repo\Alg_repo.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Main.cpp MainForm.cpp Maze.cpp Maze_Structure.cpp
+         Main.cpp
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(114): warning C4677: 'Random_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
+                 c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(125): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(126): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(127): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(128): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         MainForm.cpp
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(114): warning C4677: 'Random_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
+                 c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(125): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(126): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(127): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(128): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Maze.cpp
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(114): warning C4677: 'Random_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
+                 c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(125): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(126): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(127): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\_-walid-_\documents\visual studio 11\projects\alg_repo\alg_repo\Maze.h(128): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Maze_Structure.cpp
+     1>Maze_Structure.cpp(12): error C3867: 'Maze_Structure::getup': function call missing argument list; use '&Maze_Structure::getup' to create a pointer to member
+     1>Maze_Structure.cpp(13): error C3867: 'Maze_Structure::getright': function call missing argument list; use '&Maze_Structure::getright' to create a pointer to member
+     1>Maze_Structure.cpp(14): error C3867: 'Maze_Structure::getdown': function call missing argument list; use '&Maze_Structure::getdown' to create a pointer to member
+     1>Maze_Structure.cpp(15): error C3867: 'Maze_Structure::getleft': function call missing argument list; use '&Maze_Structure::getleft' to create a pointer to member
+         Generating Code...
+     1>Done Building Project "C:\Users\_-WALID-_\documents\visual studio 11\Projects\Alg_repo\Alg_repo\Alg_repo.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.04
