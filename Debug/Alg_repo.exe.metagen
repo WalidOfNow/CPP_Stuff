@@ -23,9 +23,10 @@ Class Alg_repo.Maze: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.ValueType P0 PointF IsBoxed : Public
     System.ValueType P1 PointF IsBoxed : Public
     System.Drawing.Graphics MyGraphics : Public
-    Alg_repo.Maze f : Public
   Methods:
-    Random_Generate(Maze* IsImplicitlyDereferenced, Int32): PrivateScope, Public, HideBySig
+    MazeStructure_Generate(Maze_Structure* IsImplicitlyDereferenced, Int32, Int32): PrivateScope, Public, HideBySig
+    Maze_Randomize(Maze_Structure* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    Maze_print(Maze_Structure, Int32, Int32, Int32): PrivateScope, Public, HideBySig
 Class Alg_repo.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

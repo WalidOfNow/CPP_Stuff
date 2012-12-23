@@ -63,7 +63,7 @@ namespace Alg_repo {
 			// 
 			// Random_Generator_Button
 			// 
-			this->Random_Generator_Button->Location = System::Drawing::Point(670, 19);
+			this->Random_Generator_Button->Location = System::Drawing::Point(752, 29);
 			this->Random_Generator_Button->Name = L"Random_Generator_Button";
 			this->Random_Generator_Button->Size = System::Drawing::Size(106, 33);
 			this->Random_Generator_Button->TabIndex = 0;
@@ -76,12 +76,12 @@ namespace Alg_repo {
 			this->Draw_Panel->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Draw_Panel->Location = System::Drawing::Point(14, 19);
 			this->Draw_Panel->Name = L"Draw_Panel";
-			this->Draw_Panel->Size = System::Drawing::Size(636, 322);
+			this->Draw_Panel->Size = System::Drawing::Size(700, 422);
 			this->Draw_Panel->TabIndex = 1;
 			// 
 			// Frrom_File
 			// 
-			this->Frrom_File->Location = System::Drawing::Point(670, 58);
+			this->Frrom_File->Location = System::Drawing::Point(752, 104);
 			this->Frrom_File->Name = L"Frrom_File";
 			this->Frrom_File->Size = System::Drawing::Size(106, 33);
 			this->Frrom_File->TabIndex = 2;
@@ -93,7 +93,7 @@ namespace Alg_repo {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(788, 372);
+			this->ClientSize = System::Drawing::Size(880, 517);
 			this->Controls->Add(this->Frrom_File);
 			this->Controls->Add(this->Draw_Panel);
 			this->Controls->Add(this->Random_Generator_Button);
@@ -107,17 +107,119 @@ namespace Alg_repo {
 		public:System::Drawing::PointF ^ P0;
 	    public:System::Drawing::PointF ^ P1;
 		public:Drawing::Graphics ^MyGraphics ;
+		
 				
 		//public:System::Windows::Forms::OpenFileDialog ^openFileDialog1;
 	   // public:System::IO::Stream ^myStream;
 	
-	public: void Random_Generate(Maze_Structure ^& maze,int n){
-			  Maze_Structure ^ temp(maze);
-			  for (int i = 0; i < n; i++)
+	public: void MazeStructure_Generate(Maze_Structure ^& maze,int n,int m){
+			  Maze_Structure  ^current = maze;
+			  Maze_Structure ^ last;
+			  Maze_Structure ^ first;
+			  for (int i = 2; i <= m; i++)
 			  {
-				
+				current->right = gcnew Maze_Structure;
+				current->right->left = current;
+				current = current->right;
+			  }
+			  current = maze;
+			  for (int i = 2; i <= n; i++)
+			  {
+				current->down = gcnew Maze_Structure;
+				current->down->up = current;
+				current = current->down;
+			  }
+			  first = maze;
+			  int j=2;
+			  while (j<=n)
+			  {
+				  
+				  current = first;
+				  last = first->down;
+				  for (int i = 2; i <= m; i++)
+				  {
+						last->right = gcnew Maze_Structure;
+						last->right->left = last;
+						last = last->right;
+						current = current->right;
+						current->down=last;
+						last->up=current;
+				  }
+				   first = first->down;
+				  j++;
 			  }
 		};
+	public: void Maze_Randomize(Maze_Structure ^& maze){
+					System::Random ^ rand;
+					System::Random ^ rand2;
+					rand = gcnew Random;
+					rand2 = gcnew Random;
+					int srand,srand2;
+					 Maze_Structure ^temp= maze;
+					 Maze_Structure ^temp2= maze;
+				 
+					 while (temp!=nullptr)
+					{	
+						while (temp2!=nullptr)
+						{							
+							srand = rand->Next(0,4);
+							srand2 = rand2->Next(1,3);
+							if (srand==1||srand2==1){temp2->up = nullptr;}
+							else if(srand==2||srand2==2){temp2->left=nullptr; }
+							temp2=temp2->right;
+						}			
+						temp = temp->down;
+						temp2= temp;
+					}			
+					}
+	public : void Maze_print(Maze_Structure ^maze,int n,int m,int d){
+								 Maze_Structure ^temp= maze;
+				 Maze_Structure ^temp2= maze;
+				 int i=1,j=1;
+
+				 while (temp!=nullptr)
+					{	
+						
+						while (temp2!=nullptr)
+						{	
+							if(!temp2->up){
+							P0->X = Draw_Panel->Location.X + ((i-1)*d);	
+							P0->Y = Draw_Panel->Location.Y + ((j-1)*d);
+							P1->X = Draw_Panel->Location.X + (i*d);
+							P1->Y = Draw_Panel->Location.Y + ((j-1)*d);
+							MyGraphics->DrawLine(MyPen,*P0,*P1);
+							}
+							if(!temp2->left){
+							P0->X = Draw_Panel->Location.X + ((i-1)*d);	
+							P0->Y = Draw_Panel->Location.Y + ((j-1)*d);
+							P1->X = Draw_Panel->Location.X + ((i-1)*d);
+							P1->Y = Draw_Panel->Location.Y + (j*d);
+							MyGraphics->DrawLine(MyPen,*P0,*P1);
+							}
+							if(!temp2->down){
+							P0->X = Draw_Panel->Location.X + ((i-1)*d);	
+							P0->Y = Draw_Panel->Location.Y + (j*d);
+							P1->X = Draw_Panel->Location.X + (i*d);
+							P1->Y = Draw_Panel->Location.Y + (j*d);
+							MyGraphics->DrawLine(MyPen,*P0,*P1);
+							}
+							if(!temp2->right){
+							P0->X = Draw_Panel->Location.X + (i*d);	
+							P0->Y = Draw_Panel->Location.Y + ((j-1)*d);
+							P1->X = Draw_Panel->Location.X + (i*d);
+							P1->Y = Draw_Panel->Location.Y + (j*d);
+							MyGraphics->DrawLine(MyPen,*P0,*P1);
+							}
+							temp2=temp2->right;
+							i++;
+							
+						}	
+						i=1;
+						temp = temp->down;
+						temp2= temp;
+						j++;
+					}
+			 }
 	private: System::Void Random_Generator_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 				 MyPen = gcnew Pen(Color::Blue) ;
 				 P0 = gcnew PointF;
@@ -125,11 +227,16 @@ namespace Alg_repo {
 				 P0->X = Draw_Panel->Location.X;
 				 P0->Y = Draw_Panel->Location.Y;
 				 P1->X = Math::Round( P0->X + 50);
-				 P1->Y = Math::Round( P0->Y + 50);
+				 P1->Y = Math::Round( P0->Y);
 				 MyGraphics=Draw_Panel->CreateGraphics();
 			     Draw_Panel->Refresh();
-				 MyGraphics->DrawLine(MyPen,*P0,*P1);
+				 Maze_Structure ^maze = gcnew Maze_Structure;
+				 MazeStructure_Generate(maze,10,15);
+				 Maze_Randomize(maze);
+				 Maze_print(maze,10,15,10);
+	
 			 }
+
 	private: System::Void Frrom_File_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		System::IO::Stream ^myStream;

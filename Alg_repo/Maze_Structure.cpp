@@ -1,18 +1,18 @@
 #include "Maze_Structure.h"
  Maze_Structure::Maze_Structure(){
-	 setup(nullptr);
-	 setright(nullptr);
-	 setdown(nullptr);
-	 setleft(nullptr);
+	 this->up =  nullptr;
+	 this->right =  nullptr;
+	  this->down =  nullptr;
+	   this->left =  nullptr;
 };
  Maze_Structure::~Maze_Structure(){
 	
- };
+ };/*
  Maze_Structure::Maze_Structure(Maze_Structure^& M){
-	this->setup(M->getup);
-	this->setright(M->getright);
-	this->setdown(M->getdown);
-	this->setleft(M->getleft);
+	setup(M->getup);
+	setright(M->getright);
+	setdown(M->getdown);
+	setleft(M->getleft);
  };
   void Maze_Structure::setup(Maze_Structure ^M){
 	this->up = M;
@@ -40,5 +40,5 @@ Maze_Structure^ Maze_Structure::getleft(){
 	return this->left;
 };
  
-
+ */
 
