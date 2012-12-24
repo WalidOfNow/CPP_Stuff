@@ -9,6 +9,7 @@ namespace Alg_repo {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::IO;
 
 	/// <summary>
 	/// Summary for Maze
@@ -239,7 +240,7 @@ namespace Alg_repo {
 
 	private: System::Void Frrom_File_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		System::IO::Stream ^myStream;
+		//System::IO::Stream ^myStream;
 		OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
 		openFileDialog1->InitialDirectory = "c:\\";
 		openFileDialog1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
@@ -248,12 +249,41 @@ namespace Alg_repo {
 
 		 if ( openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK )
 			{
-				  if ( (myStream = openFileDialog1->OpenFile()) != nullptr )
+			    String^ str = openFileDialog1->FileName; //get the path of the selected file
+				 StreamReader ^myStream = gcnew StreamReader(str);
+				 int count =0;
+				 while(!myStream->EndOfStream){
+				      String^ line = myStream->ReadLine();
+					    count++;
+					  Console::WriteLine("line {0}: {1}", count, line );
+
+						 }
+					 myStream->Close();
+				/*  if ( (myStream = openFileDialog1->OpenFile()) != nullptr )
 					 {
-							  // Insert code to read the stream here.
+							 try 
+									{
+										 Console::WriteLine("trying to open file {0}...", fileName);
+										 StreamReader^ din = File::OpenText(fileName);
+
+										 String^ str;
+										 int count = 0;
+										  while ((str = din->ReadLine()) != nullptr) 
+									 {
+									  count++;
+									  Console::WriteLine("line {0}: {1}", count, str );
+										}
+									 }
+						  catch (Exception^ e)
+							{
+								 if (dynamic_cast<FileNotFoundException^>(e))
+								     Console::WriteLine("file '{0}' not found", fileName);
+								  else
+											  Console::WriteLine("problem reading file '{0}'", fileName);
+						 }
 	
 							 myStream->Close();
-					 }
+					 }*/
 			}
 	 }
 };
