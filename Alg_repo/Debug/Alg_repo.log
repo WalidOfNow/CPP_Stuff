@@ -1,98 +1,135 @@
-﻿Build started 24/12/2012 01:27:52 ص.
+﻿Build started 30/12/2012 09:04:52 م.
      1>Project "C:\git_project\Algorithm_Project\Alg_repo\Alg_repo.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Main.cpp MainForm.cpp Maze.cpp
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MScholer_FirstInfo.cpp MScholership.cpp Main.cpp MainForm.cpp
+         MScholer_FirstInfo.cpp
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+         MScholership.cpp
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
          Main.cpp
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(116): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(129): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(153): warning C4677: 'Maze_Randomize': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(166): warning C4677: 'Maze_Randomize': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(176): warning C4677: 'Maze_print': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(191): warning C4677: 'Maze_print': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(187): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(188): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(189): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(190): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(194): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(195): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(197): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(201): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(172): warning C4101: 'srand3' : unreferenced local variable
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(169): warning C4101: 'rand3' : unreferenced local variable
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(202): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(203): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(204): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(208): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(205): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(209): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(210): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(211): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(228): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(229): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(230): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(231): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(212): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(216): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(217): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(218): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(219): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(223): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(224): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(225): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(226): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(243): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(244): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(245): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(246): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(233): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(235): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(238): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(240): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(242): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(244): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(270): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(271): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          MainForm.cpp
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(116): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(129): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(153): warning C4677: 'Maze_Randomize': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(166): warning C4677: 'Maze_Randomize': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(176): warning C4677: 'Maze_print': signature of non-private member contains assembly private type 'Maze_Structure'
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(191): warning C4677: 'Maze_print': signature of non-private member contains assembly private type 'Maze_Structure'
                  c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(187): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(188): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(189): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(190): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(194): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(195): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(197): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(201): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(172): warning C4101: 'srand3' : unreferenced local variable
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(169): warning C4101: 'rand3' : unreferenced local variable
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(202): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(203): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(204): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(208): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(205): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(209): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(210): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(211): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(228): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(229): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(230): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(231): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-         Maze.cpp
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(116): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
-                 c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(153): warning C4677: 'Maze_Randomize': signature of non-private member contains assembly private type 'Maze_Structure'
-                 c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(176): warning C4677: 'Maze_print': signature of non-private member contains assembly private type 'Maze_Structure'
-                 c:\git_project\algorithm_project\alg_repo\Maze_Structure.h(4) : see declaration of 'Maze_Structure'
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(187): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(188): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(189): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(190): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(194): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(195): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(196): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(197): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(201): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(202): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(203): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(204): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(208): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(209): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(210): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(211): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(228): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(229): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(230): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\Maze.h(231): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(212): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(216): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(217): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(218): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(219): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(223): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(224): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(225): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(226): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(243): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(244): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(245): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Maze.h(246): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(233): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(235): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(238): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(240): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(242): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(244): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(270): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(271): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          Generating Code...
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
        Link:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\git_project\Algorithm_Project\Debug\Alg_repo.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Alg_repo.MainForm.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Maze.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\git_project\Algorithm_Project\Debug\Alg_repo.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Main.obj
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\git_project\Algorithm_Project\Debug\Alg_repo.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Alg_repo.MainForm.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Maze.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholership.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_Finle.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_FirstInfo.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Rec_Drawing.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\git_project\Algorithm_Project\Debug\Alg_repo.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\DesiresList.obj
+         Debug\Main.obj
          Debug\MainForm.obj
          Debug\Maze.obj
          Debug\Maze_Structure.obj
+         Debug\MScholership.obj
+         Debug\MScholer_Finle.obj
+         Debug\MScholer_FirstInfo.obj
+         Debug\Mscholer_Student_Structs.obj
+         Debug\Rec_Drawing.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
          Alg_repo.vcxproj -> C:\git_project\Algorithm_Project\Debug\Alg_repo.exe
      1>Done Building Project "C:\git_project\Algorithm_Project\Alg_repo\Alg_repo.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.69
+Time Elapsed 00:00:08.95

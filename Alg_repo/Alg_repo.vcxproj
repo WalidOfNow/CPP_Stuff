@@ -77,10 +77,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DesiresList.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="Maze_Structure.cpp" />
+    <ClCompile Include="MScholership.cpp" />
+    <ClCompile Include="MScholer_Finle.cpp" />
+    <ClCompile Include="MScholer_FirstInfo.cpp" />
+    <ClCompile Include="Mscholer_Student_Structs.cpp" />
+    <ClCompile Include="Rec_Drawing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -90,6 +96,19 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Maze_Structure.h" />
+    <ClInclude Include="MScholership.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MScholer_Finle.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MScholer_FirstInfo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Mscholer_Student_Structs.h" />
+    <ClInclude Include="Rec_Drawing.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
@@ -97,6 +116,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maze.resx">
       <DependentUpon>Maze.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MScholership.resx">
+      <DependentUpon>MScholership.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MScholer_Finle.resx">
+      <DependentUpon>MScholer_Finle.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MScholer_FirstInfo.resx">
+      <DependentUpon>MScholer_FirstInfo.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rec_Drawing.resx">
+      <DependentUpon>Rec_Drawing.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

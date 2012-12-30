@@ -1,5 +1,9 @@
   Alg_repo.MainForm.resources - Embedded, ContainedInManifestFile, 
   Alg_repo.Maze.resources - Embedded, ContainedInManifestFile, 
+  Alg_repo.MScholership.resources - Embedded, ContainedInManifestFile, 
+  Alg_repo.MScholer_Finle.resources - Embedded, ContainedInManifestFile, 
+  Alg_repo.MScholer_FirstInfo.resources - Embedded, ContainedInManifestFile, 
+  Alg_repo.Rec_Drawing.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Alg_repo, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -27,8 +31,43 @@ Class Alg_repo.Maze: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     MazeStructure_Generate(Maze_Structure* IsImplicitlyDereferenced, Int32, Int32): PrivateScope, Public, HideBySig
     Maze_Randomize(Maze_Structure* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
     Maze_print(Maze_Structure, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+Class Alg_repo.MScholer_Finle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Student[], DersiresList[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Alg_repo.MScholership: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.ValueType[], Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.ValueType[] branches : Public
+    Boolean HB : Public
+    System.ValueType[] HelpingCompletingOfDesires : Public
+    DersiresList[] FinalWatchlist : Public
+    Student[] StudentsList : Public
+    Int32 B : Public
+    Alg_repo.MScholer_Finle F_Mscholer_final : Public
+    System.ValueType[] Desires : Public
+Class Alg_repo.MScholer_FirstInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.ValueType[] branches : Public
+    Boolean all : Public
+    Int32 count : Public
+    Alg_repo.MScholership F_MScholership : Public
+Class Alg_repo.Rec_Drawing: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Pen MyPen : Public
+    System.ValueType P1 PointF IsBoxed : Public
+    System.Drawing.Graphics MyGraphics : Public
+    System.Drawing.Color c : Public
+  Methods:
+    Drawing(Int32, ValueType PointF IsBoxed, Double): PrivateScope, Public, HideBySig
 Class Alg_repo.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Alg_repo.Maze F_Maze : Public
+    Alg_repo.Rec_Drawing F_RecDraw : Public
+    Alg_repo.MScholer_FirstInfo F_Mscholer_FirstInfo : Public

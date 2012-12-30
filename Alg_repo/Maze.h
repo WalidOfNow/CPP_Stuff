@@ -41,6 +41,7 @@ namespace Alg_repo {
 
 	private: System::Windows::Forms::Panel^  Draw_Panel;
 	private: System::Windows::Forms::Button^  Frrom_File;
+	private: System::Windows::Forms::Button^  Exit_Button;
 	protected: 
 
 
@@ -60,6 +61,7 @@ namespace Alg_repo {
 			this->Random_Generator_Button = (gcnew System::Windows::Forms::Button());
 			this->Draw_Panel = (gcnew System::Windows::Forms::Panel());
 			this->Frrom_File = (gcnew System::Windows::Forms::Button());
+			this->Exit_Button = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// Random_Generator_Button
@@ -90,11 +92,22 @@ namespace Alg_repo {
 			this->Frrom_File->UseVisualStyleBackColor = true;
 			this->Frrom_File->Click += gcnew System::EventHandler(this, &Maze::Frrom_File_Click);
 			// 
+			// Exit_Button
+			// 
+			this->Exit_Button->Location = System::Drawing::Point(764, 464);
+			this->Exit_Button->Name = L"Exit_Button";
+			this->Exit_Button->Size = System::Drawing::Size(91, 34);
+			this->Exit_Button->TabIndex = 3;
+			this->Exit_Button->Text = L"Exit";
+			this->Exit_Button->UseVisualStyleBackColor = true;
+			this->Exit_Button->Click += gcnew System::EventHandler(this, &Maze::Exit_Button_Click);
+			// 
 			// Maze
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(880, 517);
+			this->Controls->Add(this->Exit_Button);
 			this->Controls->Add(this->Frrom_File);
 			this->Controls->Add(this->Draw_Panel);
 			this->Controls->Add(this->Random_Generator_Button);
@@ -153,9 +166,10 @@ namespace Alg_repo {
 	public: void Maze_Randomize(Maze_Structure ^& maze){
 					System::Random ^ rand;
 					System::Random ^ rand2;
+					System::Random ^ rand3;
 					rand = gcnew Random;
 					rand2 = gcnew Random;
-					int srand,srand2;
+					int srand,srand2,srand3;
 					 Maze_Structure ^temp= maze;
 					 Maze_Structure ^temp2= maze;
 				 
@@ -163,8 +177,9 @@ namespace Alg_repo {
 					{	
 						while (temp2!=nullptr)
 						{							
-							srand = rand->Next(0,4);
-							srand2 = rand2->Next(1,3);
+							srand = rand->Next(1,6);
+							srand2 = rand2->Next(1,6);
+							//srand3 = rand3->Next(1,5);
 							if (srand==1||srand2==1){temp2->up = nullptr;}
 							else if(srand==2||srand2==2){temp2->left=nullptr; }
 							temp2=temp2->right;
@@ -259,32 +274,12 @@ namespace Alg_repo {
 
 						 }
 					 myStream->Close();
-				/*  if ( (myStream = openFileDialog1->OpenFile()) != nullptr )
-					 {
-							 try 
-									{
-										 Console::WriteLine("trying to open file {0}...", fileName);
-										 StreamReader^ din = File::OpenText(fileName);
-
-										 String^ str;
-										 int count = 0;
-										  while ((str = din->ReadLine()) != nullptr) 
-									 {
-									  count++;
-									  Console::WriteLine("line {0}: {1}", count, str );
-										}
-									 }
-						  catch (Exception^ e)
-							{
-								 if (dynamic_cast<FileNotFoundException^>(e))
-								     Console::WriteLine("file '{0}' not found", fileName);
-								  else
-											  Console::WriteLine("problem reading file '{0}'", fileName);
-						 }
-	
-							 myStream->Close();
-					 }*/
 			}
 	 }
+private: System::Void Exit_Button_Click(System::Object^  sender, System::EventArgs^  e) {
+			this->Close();
+
+		 }
+
 };
 }
