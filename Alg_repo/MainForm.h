@@ -2,6 +2,7 @@
 #include "MScholership.h"
 #include "MScholer_FirstInfo.h"
 #include "Rec_Drawing.h"
+#include "About.h"
 #pragma once
 
 namespace Alg_repo {
@@ -44,6 +45,7 @@ namespace Alg_repo {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button5;
 	protected: 
 
 	protected: 
@@ -61,16 +63,18 @@ namespace Alg_repo {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->Maze_Button = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// Maze_Button
 			// 
-			this->Maze_Button->Location = System::Drawing::Point(73, 48);
+			this->Maze_Button->Location = System::Drawing::Point(59, 33);
 			this->Maze_Button->Name = L"Maze_Button";
 			this->Maze_Button->Size = System::Drawing::Size(123, 35);
 			this->Maze_Button->TabIndex = 0;
@@ -80,7 +84,7 @@ namespace Alg_repo {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(73, 128);
+			this->button1->Location = System::Drawing::Point(512, 152);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(123, 33);
 			this->button1->TabIndex = 1;
@@ -90,7 +94,7 @@ namespace Alg_repo {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(73, 89);
+			this->button2->Location = System::Drawing::Point(512, 33);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(123, 33);
 			this->button2->TabIndex = 2;
@@ -100,32 +104,48 @@ namespace Alg_repo {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(200, 224);
+			this->button3->Location = System::Drawing::Point(615, 310);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(61, 26);
 			this->button3->TabIndex = 3;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"Exit";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MainForm::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(122, 224);
+			this->button4->Location = System::Drawing::Point(12, 310);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(63, 25);
+			this->button4->Size = System::Drawing::Size(62, 26);
 			this->button4->TabIndex = 4;
-			this->button4->Text = L"button4";
+			this->button4->Text = L"About";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MainForm::button4_Click);
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(59, 152);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(126, 32);
+			this->button5->TabIndex = 5;
+			this->button5->Text = L"button5";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MainForm::button5_Click);
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 262);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(711, 348);
+			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Maze_Button);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Location = System::Drawing::Point(300, 300);
 			this->Name = L"MainForm";
 			this->Text = L"MainForm";
 			this->ResumeLayout(false);
@@ -135,7 +155,7 @@ namespace Alg_repo {
 
 	public : Maze ^F_Maze;
 	public : Rec_Drawing ^F_RecDraw ;
-
+	public : About ^ F_About;
 	public : MScholer_FirstInfo ^ F_Mscholer_FirstInfo;
 	private: System::Void Maze_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -154,5 +174,17 @@ namespace Alg_repo {
 					F_RecDraw = gcnew Rec_Drawing;
 					F_RecDraw->Show();
 			 }
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+				F_About = gcnew About;
+				F_About->Show();
+		 }
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Application::Exit();
+		 }
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+			 System::Diagnostics::Process ^l;
+			 l = gcnew System::Diagnostics::Process;
+			 l->Start("Project1.exe");
+		 }
 };
 }

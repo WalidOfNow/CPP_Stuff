@@ -45,6 +45,9 @@
     <ClCompile Include="DesiresList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="About.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Maze.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mscholer_Student_Structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="About.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

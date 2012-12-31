@@ -1,24 +1,32 @@
-﻿Build started 30/12/2012 09:04:52 م.
+﻿Build started 31/12/2012 03:26:37 ص.
      1>Project "C:\git_project\Algorithm_Project\Alg_repo\Alg_repo.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MScholer_FirstInfo.cpp MScholership.cpp Main.cpp MainForm.cpp
-         MScholer_FirstInfo.cpp
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MScholer_Finle.cpp MScholer_FirstInfo.cpp MScholership.cpp Main.cpp MainForm.cpp
+         MScholer_Finle.cpp
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(31): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+         MScholer_FirstInfo.cpp
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(31): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(280): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+                 c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(281): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
          MScholership.cpp
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(31): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(280): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(281): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
          Main.cpp
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(129): warning C4677: 'MazeStructure_Generate': signature of non-private member contains assembly private type 'Maze_Structure'
@@ -49,13 +57,14 @@
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(244): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(245): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(246): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(31): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(280): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(281): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(233): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(235): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
@@ -94,13 +103,14 @@
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(244): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(245): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Maze.h(246): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
-     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(18): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(19): warning C4677: 'MScholer_Finle': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(298): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
+     1>c:\git_project\algorithm_project\alg_repo\MScholer_Finle.h(31): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(280): warning C4677: 'FinalWatchlist': signature of non-private member contains assembly private type 'DersiresList'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(16) : see declaration of 'DersiresList'
-     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(299): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
+     1>c:\git_project\algorithm_project\alg_repo\MScholership.h(281): warning C4677: 'StudentsList': signature of non-private member contains assembly private type 'Student'
                  c:\git_project\algorithm_project\alg_repo\Mscholer_Student_Structs.h(4) : see declaration of 'Student'
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(233): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(235): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
@@ -111,12 +121,14 @@
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(270): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\git_project\algorithm_project\alg_repo\Rec_Drawing.h(271): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          Generating Code...
-     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
-     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
-     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
-     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(228): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(475): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(475): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(475): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(475): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
+     1>c:\git_project\algorithm_project\alg_repo\mscholer_finle.h(475): warning C4715: 'Alg_repo::MScholer_Finle::desireIndex' : not all control paths return a value
        Link:
-         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\git_project\Algorithm_Project\Debug\Alg_repo.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Alg_repo.MainForm.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Maze.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholership.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_Finle.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_FirstInfo.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Rec_Drawing.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\git_project\Algorithm_Project\Debug\Alg_repo.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\DesiresList.obj
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\git_project\Algorithm_Project\Debug\Alg_repo.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Alg_repo.About.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MainForm.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Maze.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholership.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_Finle.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.MScholer_FirstInfo.resources /ASSEMBLYRESOURCE:Debug\Alg_repo.Rec_Drawing.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\git_project\Algorithm_Project\Debug\Alg_repo.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\About.obj
+         Debug\DesiresList.obj
          Debug\Main.obj
          Debug\MainForm.obj
          Debug\Maze.obj
@@ -132,4 +144,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.95
+Time Elapsed 00:00:04.56

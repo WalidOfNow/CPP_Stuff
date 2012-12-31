@@ -191,7 +191,6 @@ namespace Alg_repo {
 private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 			 if(textBox1->Text  != ""){
 							
-			//	MessageBox::Show(System::Convert::ToString((textBox1->Text)->GetType()));
 			 branches[ this->comboBox1->SelectedIndex] = System::Convert::ToInt32(this->textBox1->Text);
 				 
 			 }

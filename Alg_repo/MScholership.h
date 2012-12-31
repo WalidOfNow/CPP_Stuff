@@ -10,7 +10,7 @@ namespace Alg_repo {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace System::IO;
 	/// <summary>
 	/// Summary for MScholership
 	/// </summary>
@@ -20,7 +20,6 @@ namespace Alg_repo {
 		MScholership(array< int^,1 > ^b,int count)
 		{
 			InitializeComponent();
-			branches = b;
 			Main_Title->Text = "You can add " + System::Convert::ToString(count) + "  Students";
 			dataGridView1[0,0]->Value = 1;
 			Desires = b;
@@ -40,8 +39,8 @@ namespace Alg_repo {
 	private: System::Windows::Forms::Button^  Exit_Button;
 	private: System::Windows::Forms::Label^  Main_Title;
 	private: System::Windows::Forms::DataGridView^  dataGridView1;
-	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::TextBox^  textBox1;
+
+
 	private: System::Windows::Forms::Panel^  panel1;
 	private: System::Windows::Forms::RadioButton^  radioButton2;
 	private: System::Windows::Forms::RadioButton^  radioButton1;
@@ -59,6 +58,13 @@ namespace Alg_repo {
 	private: System::Windows::Forms::DataGridViewComboBoxColumn^  Column4;
 	private: System::Windows::Forms::DataGridViewComboBoxColumn^  Column5;
 	private: System::Windows::Forms::DataGridViewComboBoxColumn^  Column6;
+
+
+
+
+
+
+
 
 
 
@@ -95,6 +101,10 @@ namespace Alg_repo {
 			this->Exit_Button = (gcnew System::Windows::Forms::Button());
 			this->Main_Title = (gcnew System::Windows::Forms::Label());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -102,12 +112,6 @@ namespace Alg_repo {
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
 			this->Column6 = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->dataGridView1))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -136,6 +140,7 @@ namespace Alg_repo {
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::Window;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {this->Column7, 
 				this->Column1, this->Column2, this->Column3, this->Column4, this->Column5, this->Column6});
@@ -150,85 +155,11 @@ namespace Alg_repo {
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MScholership::dataGridView1_CellContentClick);
 			this->dataGridView1->RowsAdded += gcnew System::Windows::Forms::DataGridViewRowsAddedEventHandler(this, &MScholership::dataGridView1_RowAdded);
 			// 
-			// Column7
-			// 
-			this->Column7->HeaderText = L"ID";
-			this->Column7->Name = L"Column7";
-			this->Column7->ReadOnly = true;
-			this->Column7->Width = 40;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Name";
-			this->Column1->Name = L"Column1";
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Exam Marks";
-			this->Column2->Name = L"Column2";
-			this->Column2->Width = 70;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Enterence Marks";
-			this->Column3->Name = L"Column3";
-			this->Column3->Width = 70;
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"1st desire";
-			this->Column4->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
-				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
-			this->Column4->Name = L"Column4";
-			this->Column4->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Column4->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
-			this->Column4->Width = 120;
-			// 
-			// Column5
-			// 
-			this->Column5->HeaderText = L"2nd desire";
-			this->Column5->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
-				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
-			this->Column5->Name = L"Column5";
-			this->Column5->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Column5->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
-			this->Column5->Width = 120;
-			// 
-			// Column6
-			// 
-			this->Column6->HeaderText = L"3rd desire";
-			this->Column6->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
-				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
-			this->Column6->Name = L"Column6";
-			this->Column6->Resizable = System::Windows::Forms::DataGridViewTriState::True;
-			this->Column6->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
-			this->Column6->Width = 120;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Tahoma", 10));
-			this->label1->Location = System::Drawing::Point(14, 93);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(292, 17);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Number of Students that want to be added ->";
-			this->label1->Visible = false;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(312, 92);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(91, 20);
-			this->textBox1->TabIndex = 4;
-			this->textBox1->Visible = false;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MScholership::textBox1_TextChanged);
-			// 
 			// panel1
 			// 
 			this->panel1->Controls->Add(this->radioButton2);
 			this->panel1->Controls->Add(this->radioButton1);
-			this->panel1->Location = System::Drawing::Point(17, 47);
+			this->panel1->Location = System::Drawing::Point(17, 64);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(342, 35);
 			this->panel1->TabIndex = 5;
@@ -269,6 +200,60 @@ namespace Alg_repo {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MScholership::button1_Click);
 			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"ID";
+			this->Column7->Name = L"Column7";
+			this->Column7->ReadOnly = true;
+			this->Column7->Width = 40;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Name";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Average Marks";
+			this->Column2->Name = L"Column2";
+			this->Column2->Width = 70;
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Entrance Marks";
+			this->Column3->Name = L"Column3";
+			this->Column3->Width = 70;
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"1st desire";
+			this->Column4->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
+				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
+			this->Column4->Name = L"Column4";
+			this->Column4->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Column4->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
+			this->Column4->Width = 120;
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"2nd desire";
+			this->Column5->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
+				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
+			this->Column5->Name = L"Column5";
+			this->Column5->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Column5->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
+			this->Column5->Width = 120;
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"3rd desire";
+			this->Column6->Items->AddRange(gcnew cli::array< System::Object^  >(8) {L"Software Engineering", L"Information Systems", 
+				L"Multimedia", L"Computer Networks", L"Web Applications", L"Knowledge Management", L"Cloud Computing", L"Semantic Web"});
+			this->Column6->Name = L"Column6";
+			this->Column6->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Column6->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
+			this->Column6->Width = 120;
+			// 
 			// MScholership
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -276,8 +261,6 @@ namespace Alg_repo {
 			this->ClientSize = System::Drawing::Size(784, 373);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->Main_Title);
 			this->Controls->Add(this->Exit_Button);
@@ -292,7 +275,6 @@ namespace Alg_repo {
 
 		}
 #pragma endregion
-	public : array< int^,1 >  ^branches;
 	public : bool HB;
 	public:  array< bool^,1 >  ^ HelpingCompletingOfDesires;
 	public :  array< DersiresList^,1 >  ^ FinalWatchlist;
@@ -301,7 +283,7 @@ namespace Alg_repo {
 	public : MScholer_Finle ^F_Mscholer_final;
 	public :array< int^,1 > ^Desires;
 private : double finalmark(int a, int b){
-				return (a+b)/2;		
+				return (a+b)/2.0;		
 			}
 private :bool CompletingOfDesire( DersiresList ^ LS,int ^ Desire)
 	{
@@ -384,7 +366,7 @@ private :void InsertElem(int I, int D )
 	DersiresList ^ Temp = FinalWatchlist[D];
 
 	if ( FinalWatchlist[D] == nullptr ) {
-		FinalWatchlist[D] = gcnew DersiresList;
+		FinalWatchlist[D] = gcnew DersiresList();
 		FinalWatchlist[D] -> StudentID = I;
 		FinalWatchlist[D] -> Next = nullptr;
 	}
@@ -393,7 +375,7 @@ private :void InsertElem(int I, int D )
 		while ( Temp -> Next != nullptr )
 			Temp = Temp -> Next; 
 
-		Temp -> Next = gcnew DersiresList;
+		Temp -> Next = gcnew DersiresList();
 		Temp -> Next -> StudentID  = I;
 		Temp -> Next -> Next = nullptr;
 	}
@@ -410,14 +392,14 @@ private :void Trying( int I, array< Student^,1 >  ^ SL, int N )
 
 			for ( int i = 0 ; i < 3 ; i++ ) {
 
-				if ( ( !CompletingOfDesire( FinalWatchlist[* SL[I]->Watchlist[i] ],Desires[* SL[I]->Watchlist[i]] ) ) && ( !HelpingCompletingOfDesires[* SL[I]->Watchlist[i] ] ) ) {
+				if ( ( !CompletingOfDesire( FinalWatchlist[* SL[I]->Watchlist[i] ],Desires[* SL[I]->Watchlist[i]] ) ) && ( !*HelpingCompletingOfDesires[* SL[I]->Watchlist[i] ]) ) {
 
 					InsertElem(I, *SL[I]->Watchlist[i] );
 					SL[I]->IsCompleted = true;
 					break;
 				}
 
-				else if ( ( !HelpingCompletingOfDesires[* SL[I]->Watchlist[i] ] ) && ( ( FindLowerElem( SL, FinalWatchlist[* SL[I]->Watchlist[i] ], I, H ) ) || ( FindEqualElem( SL, FinalWatchlist[* SL[I]->Watchlist[i] ], I, H ) ) ) ) {
+				else if ( ( !*HelpingCompletingOfDesires[* SL[I]->Watchlist[i] ] ) && ( ( FindLowerElem( SL, FinalWatchlist[* SL[I]->Watchlist[i] ], I, H ) ) || ( FindEqualElem( SL, FinalWatchlist[* SL[I]->Watchlist[i] ], I, H ) ) ) ) {
 
 						
 
@@ -451,7 +433,7 @@ private :void Trying( int I, array< Student^,1 >  ^ SL, int N )
 		if ( !HB )
 			B++;
 
-		Trying( B, SL, N );
+		Trying( B, SL, N);
 	}
 }
 private : int desireIndex(String ^ SL){
@@ -501,8 +483,36 @@ private: System::Void radioButton1_CheckedChanged(System::Object^  sender, Syste
 			 dataGridView1->Enabled = true;
 		 }
 private: System::Void radioButton2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-			 label1->Hide();
-			 textBox1->Hide();
+		OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
+		openFileDialog1->InitialDirectory = "c:\\";
+		openFileDialog1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+		openFileDialog1->FilterIndex = 2;
+		openFileDialog1->RestoreDirectory = true;
+
+		 if ( openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK )
+			{
+			    String^ str = openFileDialog1->FileName; //get the path of the selected file
+				 StreamReader ^myStream = gcnew StreamReader(str);
+				 int count =0;
+				 while(!myStream->EndOfStream){
+					   String^ line = myStream->ReadLine();
+					   dataGridView1[0,count]->Value = Convert::ToInt32(line);
+					    line = myStream->ReadLine();
+					   dataGridView1[1,count]->Value = line;
+					    line = myStream->ReadLine();
+					   dataGridView1[2,count]->Value = Convert::ToInt32(line);
+					    line = myStream->ReadLine();
+					   dataGridView1[3,count]->Value = Convert::ToInt32(line);
+					   line = myStream->ReadLine();
+					   dataGridView1[4,count]->Value = line;
+					    line = myStream->ReadLine();
+					   dataGridView1[5,count]->Value = line;
+					    line = myStream->ReadLine();
+					   dataGridView1[6,count]->Value = line;
+					   count++;
+						 }
+					 myStream->Close();
+			}
 		 }
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {

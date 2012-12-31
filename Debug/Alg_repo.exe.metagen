@@ -1,3 +1,4 @@
+  Alg_repo.About.resources - Embedded, ContainedInManifestFile, 
   Alg_repo.MainForm.resources - Embedded, ContainedInManifestFile, 
   Alg_repo.Maze.resources - Embedded, ContainedInManifestFile, 
   Alg_repo.MScholership.resources - Embedded, ContainedInManifestFile, 
@@ -19,6 +20,9 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class Alg_repo.About: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Alg_repo.Maze: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -34,11 +38,12 @@ Class Alg_repo.Maze: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class Alg_repo.MScholer_Finle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Student[], DersiresList[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 SLCount : Public
 Class Alg_repo.MScholership: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.ValueType[], Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.ValueType[] branches : Public
     Boolean HB : Public
     System.ValueType[] HelpingCompletingOfDesires : Public
     DersiresList[] FinalWatchlist : Public
@@ -70,4 +75,5 @@ Class Alg_repo.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   Fields:
     Alg_repo.Maze F_Maze : Public
     Alg_repo.Rec_Drawing F_RecDraw : Public
+    Alg_repo.About F_About : Public
     Alg_repo.MScholer_FirstInfo F_Mscholer_FirstInfo : Public
